@@ -4,28 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Cardápio Agapio Lanches</title>
-    <meta name="theme-color" content="#E7252A" />
     
-    <!-- Configurações de Favicon e App -->
-    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqFTznbj8hGOxa8oY7w9On6zmw6VmW6y4kr1lo4M7YG3vNgAVk7PlnlSHjpRanOwBTt8Cf6wvdDkHtBGRIymydYivyhV8d5RxIu-g4gMsqY2i77rRFVYDf25L9IYgPQS5axqc1hNWX_4_tvupmqH37dImY8h57iFPvDoa6x3kDZE2rKfYLjeLutb1BPcU/s192/A2.png" sizes="192x192" type="image/png" />
-<link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqFTznbj8hGOxa8oY7w9On6zmw6VmW6y4kr1lo4M7YG3vNgAVk7PlnlSHjpRanOwBTt8Cf6wvdDkHtBGRIymydYivyhV8d5RxIu-g4gMsqY2i77rRFVYDf25L9IYgPQS5axqc1hNWX_4_tvupmqH37dImY8h57iFPvDoa6x3kDZE2rKfYLjeLutb1BPcU/s512/A2.png" />
-    <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqFTznbj8hGOxa8oY7w9On6zmw6VmW6y4kr1lo4M7YG3vNgAVk7PlnlSHjpRanOwBTt8Cf6wvdDkHtBGRIymydYivyhV8d5RxIu-g4gMsqY2i77rRFVYDf25L9IYgPQS5axqc1hNWX_4_tvupmqH37dImY8h57iFPvDoa6x3kDZE2rKfYLjeLutb1BPcU/s180/A2.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.ico/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.ico/favicon-16x16.png" />
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico/favicon.ico" />
     
-    <!-- Meta tags para Mobile e PWA -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/logo.ico/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/logo.ico/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/logo.ico/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/logo.ico/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/logo.ico/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/logo.ico/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/logo.ico/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/logo.ico/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.ico/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/logo.ico/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.ico/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/logo.ico/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.ico/favicon-16x16.png" />
+    
+    <meta name="msapplication-TileColor" content="#E7252A" />
+    <meta name="msapplication-TileImage" content="assets/logo.ico/ms-icon-144x144.png" />
     <meta name="theme-color" content="#E7252A" />
+
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="mobile-web-app-capable" content="yes" />
 
-    <!-- Tags de Compartilhamento (Open Graph / WhatsApp) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Agapio Lanches - Cardápio Digital" />
-    <meta property="og:description" content="Os melhores xis, baurus e cachorros de Porto Alegre desde 1982. Peça agora pelo WhatsApp!" />
-    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/..." />
-    <meta property="og:url" content="https://agapiolanches.com.br" />
+    <link rel="manifest" href="manifest.json" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="manifest" href="manifest.json" 
-    /> <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    ```
+
+### Por que isso ajuda?
+1. **Fim dos Bloqueios:** O navegador não vai mais reclamar de "Tracking Prevention" porque os ícones estão no seu próprio servidor (GitHub Pages).
+2. **Carregamento mais rápido:** O navegador não precisa "pedir permissão" para um domínio externo para baixar o ícone.
+3. **Compatibilidade Total:** Ao definir tamanhos como `32x32`, `180x180`, etc., você atende perfeitamente ao Android, iPhone e Desktop.
+
+**Nota:** Como sua pasta se chama `logo.ico` (mesmo sendo uma pasta e não um arquivo), mantive o caminho exatamente como `assets/logo.ico/nome-do-arquivo.png`.
+
+Deseja que eu também prepare as meta tags de compartilhamento (Open Graph) para usar as imagens dessa pasta local? Seria o próximo passo para deixar o console 100% limpo.
 
     <style>
         :root {
