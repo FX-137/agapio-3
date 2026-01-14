@@ -335,41 +335,6 @@
                 </div>
             </section>`;
 
-        const CookieConsent = () => {
-            const [isVisible, setIsVisible] = useState(false);
-            useEffect(() => {
-                const consent = localStorage.getItem('agapio-cookie-consent-v5');
-                if (!consent) {
-                    const timer = setTimeout(() => setIsVisible(true), 1500);
-                    return () => clearTimeout(timer);
-                }
-            }, []);
-            const accept = () => {
-                localStorage.setItem('agapio-cookie-consent-v5', 'accepted');
-                setIsVisible(false);
-            };
-            if (!isVisible) return null;
-            return html`
-                <div class="fixed bottom-4 left-4 right-4 z-[100] animate-slide-up">
-                    <div class="max-w-4xl mx-auto bg-[#1a1a1a] border-2 border-[#E7252A] rounded-2xl shadow-2xl p-6 flex flex-col md:flex-row items-center gap-6 text-white">
-                        <div class="flex-shrink-0">
-                            <svg class="w-12 h-12 text-[#EED117]" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                                <circle cx="8" cy="8.5" r="1.5"/><circle cx="12" cy="7" r="1.5"/><circle cx="15.5" cy="8.5" r="1.5"/><circle cx="10" cy="12" r="1.5"/><circle cx="14.5" cy="13.5" r="1.5"/><circle cx="9" cy="16" r="1.5"/>
-                            </svg>
-                        </div>
-                        <div class="flex-grow text-center md:text-left">
-                            <h4 class="text-[#EED117] font-black uppercase mb-1">Privacidade & Cookies</h4>
-                            <p class="text-sm">Utilizamos cookies para garantir a melhor experiência. Ao continuar, você concorda com nossos termos.</p>
-                        </div>
-                        <div class="flex gap-3">
-                            <button onClick=${() => setIsVisible(false)} class="px-6 py-2 rounded-xl border-2 border-[#E7252A] text-[#E7252A] font-bold text-sm uppercase">Recusar</button>
-                            <button onClick=${accept} class="px-8 py-2 rounded-xl bg-[#E7252A] text-[#1a1a1a] font-black text-sm uppercase">Aceitar</button>
-                        </div>
-                    </div>
-                </div>`;
-        };
-
        const App = () => {
             const [modal, setModal] = useState(null);
             return html`
@@ -385,29 +350,41 @@
                         <div class="w-full max-w-[1600px] mx-auto mt-8 flex justify-center">
                             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEin2r0kT4FAtOeGB7XCV0nSHYOj0rBHIxkryrP0Jc70iuSP028aXlAYkPhtfr5GopTpIdO2w5rKYfwe0lMuWLNz6rTL3fNsmctbl3OMX7EaeqNVK3KWLYohJ1K79ywC5qtCUw-m0jCaPgAcbMZZDL8382Y0TU-gEXxwgK3NKyrCdqu3fgw9Mnxnx7sMbxY/s1084/Tarja%20pronta.png" class="w-full max-w-[280px] md:max-w-[600px] h-auto" alt="Cartões" />
                         </div>
-                    </main>
 
-                    <footer class="bg-[#E7252A] text-[#EED117] py-6 border-t-2 border-[#C01E22]">
-                        <div class="max-w-[1600px] mx-auto px-6">
-                            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left border-b border-[#EED117]/20 pb-4 mb-4">
-                                <div class="font-bold text-sm">
-                                    © ${new Date().getFullYear()} ${BUSINESS_INFO.name}. Todos os direitos reservados.
-                                </div>
-                                <div class="flex gap-4 font-bold uppercase tracking-widest text-[10px]">
-                                    <button onClick=${() => setModal('terms')} class="hover:underline">Termos de Uso</button>
-                                    <span>|</span>
-                                    <button onClick=${() => setModal('privacy')} class="hover:underline">Política de Privacidade</button>
-                                </div>
+                        <div class="w-full max-w-[1200px] mx-auto mt-8">
+                            <div class="bg-[#E7252A] rounded-t-lg py-2 px-4 text-center border-x-2 border-t-2 border-[#C01E22]">
+                                <h2 class="text-xl font-black text-[#EED117] uppercase">Nossa Localização</h2>
                             </div>
-                            
-                            <div class="flex flex-col items-center justify-center gap-2">
-                                <div class="flex items-center gap-2">
-                                    <span class="text-[10px] font-bold uppercase tracking-widest">CRIADO POR FCL</span>
-                                    <a href="https://wa.me/${BUSINESS_INFO.devWhatsapp}?text=Olá Fernando. Gostaria de mais informações sobre criação de sites." target="_blank" class="flex items-center gap-1 bg-[#22c55e] px-2 py-0.5 rounded-full hover:scale-105 transition-all">
-                                        <${Icons.Whatsapp} className="w-3 h-3 text-white" />
-                                        <span class="text-[10px] font-black text-white uppercase">Contato</span>
+                            <div class="border-x-2 border-b-2 border-[#C01E22] bg-[#EED117] p-4 rounded-b-lg">
+                                <div class="w-full h-64 border-2 border-[#E7252A] rounded bg-gray-200 mb-4 overflow-hidden shadow-inner">
+                                    <iframe width="100%" height="100%" frameborder="0" style="border:0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=SUA_CHAVE_AQUI_OU_URL_EMBED&q=Agapio+Lanches+Menino+Deus+Porto+Alegre" title="Google Maps"></iframe>
+                                </div>
+                                <div class="flex justify-center">
+                                    <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+José+de+Alencar,+869+-+Menino+Deus,+Porto+Alegre" target="_blank" class="flex items-center gap-2 bg-[#22c55e] text-white font-black py-2.5 px-8 rounded-full shadow-md transition-transform active:scale-95 hover:bg-[#16a34a]">
+                                        <${Icons.Nav} className="w-5 h-5" />COMO CHEGAR
                                     </a>
                                 </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <footer class="bg-[#E7252A] text-[#EED117] py-4 border-t-2 border-[#C01E22]">
+                        <div class="max-w-[1600px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+                            <div class="text-[11px] font-bold uppercase">
+                                © ${new Date().getFullYear()} ${BUSINESS_INFO.name}
+                            </div>
+                            
+                            <div class="flex items-center gap-2">
+                                <span class="text-[9px] font-bold uppercase opacity-80">Criado por FCL</span>
+                                <a href="https://wa.me/${BUSINESS_INFO.devWhatsapp}" target="_blank" class="flex items-center gap-1 bg-[#EED117] text-[#E7252A] px-2 py-0.5 rounded-full font-black text-[9px] hover:scale-105 transition-all">
+                                    <${Icons.Whatsapp} className="w-3 h-3" /> CONTATO
+                                </a>
+                            </div>
+
+                            <div class="flex gap-4 font-bold uppercase text-[10px]">
+                                <button onClick=${() => setModal('terms')} class="hover:underline">Termos</button>
+                                <span class="opacity-30">|</span>
+                                <button onClick=${() => setModal('privacy')} class="hover:underline">Privacidade</button>
                             </div>
                         </div>
                     </footer>
@@ -415,16 +392,32 @@
                     <${CookieConsent} />
 
                     ${modal && html`
-                        <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-                            <div class="bg-white rounded-2xl w-full max-w-2xl max-h-[80vh] flex flex-col shadow-2xl">
-                                <div class="p-6 bg-[#EED117] flex justify-between items-center rounded-t-2xl">
-                                    <h2 class="text-2xl font-bold text-[#E7252A]">${modal === 'privacy' ? 'Privacidade' : 'Termos'}</h2>
-                                    <button onClick=${() => setModal(null)} class="text-[#E7252A] font-bold text-2xl">✕</button>
+                        <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+                            <div class="bg-white rounded-2xl w-full max-w-2xl max-h-[80vh] flex flex-col shadow-2xl border-4 border-[#E7252A]">
+                                <div class="p-4 bg-[#EED117] flex justify-between items-center border-b-2 border-[#E7252A]">
+                                    <h2 class="text-xl font-black text-[#E7252A] uppercase">${modal === 'privacy' ? 'Política de Privacidade' : 'Termos de Uso'}</h2>
+                                    <button onClick=${() => setModal(null)} class="text-[#E7252A] font-black text-2xl hover:scale-110">✕</button>
                                 </div>
-                                <div class="p-6 overflow-y-auto text-gray-700 whitespace-pre-line leading-relaxed">
-                                    ${modal === 'privacy' ? '...' : '...'}
+                                <div class="p-6 overflow-y-auto text-gray-800 text-sm leading-relaxed">
+                                    ${modal === 'privacy' ? html`
+                                        <p class='font-bold mb-2'>1. Coleta de Informações</p>
+                                        <p class='mb-4'>Não coletamos dados pessoais automaticamente. Os dados fornecidos (nome, endereço) ocorrem apenas durante o pedido via WhatsApp para viabilizar a entrega.</p>
+                                        <p class='font-bold mb-2'>2. Uso de Cookies</p>
+                                        <p class='mb-4'>Utilizamos cookies apenas para lembrar que você aceitou este aviso de privacidade.</p>
+                                        <p class='font-bold mb-2'>3. Segurança</p>
+                                        <p>Suas informações de chat são protegidas pela criptografia de ponta a ponta do próprio WhatsApp.</p>
+                                    ` : html`
+                                        <p class='font-bold mb-2'>1. Pedidos e Preços</p>
+                                        <p class='mb-4'>Os preços exibidos podem sofrer alteração sem aviso prévio. A confirmação do valor final é feita no ato do pedido via WhatsApp.</p>
+                                        <p class='font-bold mb-2'>2. Área de Entrega</p>
+                                        <p class='mb-4'>Atendemos Porto Alegre e região. Taxas de entrega variam conforme a distância.</p>
+                                        <p class='font-bold mb-2'>3. Imagens</p>
+                                        <p>As fotos no cardápio são ilustrativas, visando apresentar a montagem e ingredientes dos produtos.</p>
+                                    `}
                                 </div>
-                                <div class="p-4 border-t flex justify-end"><button onClick=${() => setModal(null)} class="bg-[#E7252A] text-white px-6 py-2 rounded font-bold">Fechar</button></div>
+                                <div class="p-4 bg-gray-50 border-t flex justify-end">
+                                    <button onClick=${() => setModal(null)} class="bg-[#E7252A] text-white px-8 py-2 rounded-lg font-black uppercase text-xs tracking-widest shadow-md">Fechar</button>
+                                </div>
                             </div>
                         </div>
                     `}
