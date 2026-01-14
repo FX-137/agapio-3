@@ -1,0 +1,24 @@
+{
+  "id": "/agapio-2/",
+  "name": "Agápio Lanches",
+  "short_name": "Agápio",
+  "description": "Cardápio Digital Agápio Lanches",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E7252A",
+  "icons": [
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuzCRv-DaCvrC8J9uGGtTPFlkHaE7RqVzeEIigXuV2V77jdcZoU-TANdTG2CYuujoZacLruP-3AOhILYDG8V1mxjAf5s9wyODe9UprbbvPgG9u-KXLyERt10jLIxfN5EnASBqcWZa44AcEAqNRWCOFX6tMBVw23rkt7CZEa9R21UcvhA_kXGeQCf16Djs/s192/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5efvYdAVzcNDcQSB4GO-TS-z6_FmVm1DlsSsDA_I6LbDNpLqPsr8TaFo4E_JMo4yHfJ_S607N-zB0iWi9aERHRtUkhe-uIGGZ0yWL5wkRb2Hw-2Yt1yuZsiWWI9oClus7l-ShhV9G6vT_yWAN4AURrA7Jb8SgzOaF9FlC2So2pGkPBNdjZWpQRlbTg6o/s512/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
