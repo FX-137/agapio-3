@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Cardápio Agapio Lanches</title>
     
-   <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.ico/favicon-32x32.png" crossorigin="anonymous" />
-<link rel="icon" type="image/png" sizes="16x16" href="./assets/logo.ico/favicon-16x16.png" crossorigin="anonymous" />
-<link rel="icon" type="image/x-icon" href="./assets/logo.ico/favicon.ico" crossorigin="anonymous" />
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.ico/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/logo.ico/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/logo.ico/apple-icon-180x180.png" />
+<link rel="shortcut icon" href="./assets/logo.ico/favicon.ico" />
     
     <link rel="apple-touch-icon" sizes="57x57" href="assets/logo.ico/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="assets/logo.ico/apple-icon-60x60.png" />
@@ -97,10 +98,10 @@
                 id: "mais_pedidos",
                 title: "Lanches Mais Pedidos",
                 items: [
-                    { id: "MP1", name: "Xis Salada", description: "Pão massinha, hambúrguer bovino, tomate, alface, milho, ervilha, queijo, ovo e maionese.", price: 18.00, image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVSiogRMebpnMoYugjjqLuhLrtfeB9kWJrEnawPljw-OcBmgh5xDWadbG1I_XXgP4_x1P5yMbSUhqQSViDYyNbPVkJqUVJ4U9DwX0vPvpHO60D_QV_L0IJh283jkhoMACbupZANh_zIzm-2AmQRgnQnkG4gRYLCRwe-NbEl0-ZX08WFWw-hAlnA47XIug/s600/Xis%20salada%20cenario%203.webp" },
-                    { id: "MP2", name: "Big Agápio", description: "Pão massinha, 2 hambúrgueres bovinos, tomate, alface, milho, ervilha, palmito, pepino, presunto, queijo, ovo e maionese.", price: 30.00, image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2YYu-7eBWjz_t1SNtDmQqDk7Q79a9H-CvOsG4RQFhk08M0eIwHIpvvKw-No-JqogxH4JSIbzcIU5JemqXxjObrfSL3-ikayDRIvokzcx1cfYB_nK4OnEmzrdhLZ9i6YQ2_xu10jqrDDZWpHuwReDN1G0GNGRt_KKgohtwjaKzE-AKPs_CCEMQ-cGNITs/s600/Big%20agapio%20chat.webp" },
-                    { id: "MP3", name: "Bauru Master", description: "Pão cervejinha, contrafilé, provolone, catupiry, tomate, alface, queijos, ovo, presunto, bacon e maionese.", price: 36.00, image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJr-7hPNxAvvu2isPkvwzutWzoyC_6nvbo8ayAuOW3iV3WJRLb528HVzydIEvoXNlD8JanM8GJPG4MQzcoVJMTbxTPuA4AP4EyV5cZkn3TSyFjYmBAaANFRN2QwLzPEs7w2Rcy0wAKxmIh1Ku8YlQe37-aM6MaqRr4sjvgVl0lOHl_rNjYI4o4iXQ5mFc/s600/Bauru%20master%20chat.webp" },
-                    { id: "MP4", name: "Xis Bacon", description: "Pão massinha, hambúrguer bovino, bacon, tomate, alface, milho, ervilha, queijo, ovo e maionese.", price: 25.00, image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBWJqySWM6KpocXXACw1gRH45Ba4sGorcWOdJ7mkmWxnJZ6JW6UP9238EEstQ49O3zzlxY77zMMV3KKgkbBkkXlVqvRWExaHdPStSy9BAFL_fYIvSZNm6jJS5AE7mQwVvoxHfU8q57bo6UyOZ67MwZ4W7sP9CbYtAds_aUt2qe7qPpk5Pc8OqwTpeYLaQ/s600/Xis%20bacon%20cenario.webp" }
+                    { id: "MP1", name: "Xis Salada", description: "Pão massinha, hambúrguer bovino, tomate, alface, milho, ervilha, queijo, ovo e maionese.", price: 18.00, image: "./assets/xis-salada.webp" },
+                    { id: "MP2", name: "Big Agápio", description: "Pão massinha, 2 hambúrgueres bovinos, tomate, alface, milho, ervilha, palmito, pepino, presunto, queijo, ovo e maionese.", price: 30.00, image: "./assets/big-agapio.webp" },
+                    { id: "MP3", name: "Bauru Master", description: "Pão cervejinha, contrafilé, provolone, catupiry, tomate, alface, queijos, ovo, presunto, bacon e maionese.", price: 36.00, image: "./assets/bauru-master.webp" },
+                    { id: "MP4", name: "Xis Bacon", description: "Pão massinha, hambúrguer bovino, bacon, tomate, alface, milho, ervilha, queijo, ovo e maionese.", price: 25.00, image: "./assets/xis-bacon.webp" }
                 ]
             },
             {
@@ -389,8 +390,7 @@
                             ${MENU_DATA.map(cat => html`<${MenuSection} key=${cat.id} category=${cat} info=${BUSINESS_INFO} />`)}
                         </div>
                         <div class="w-full max-w-[1600px] mx-auto mt-8 flex justify-center">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEin2r0kT4FAtOeGB7XCV0nSHYOj0rBHIxkryrP0Jc70iuSP028aXlAYkPhtfr5GopTpIdO2w5rKYfwe0lMuWLNz6rTL3fNsmctbl3OMX7EaeqNVK3KWLYohJ1K79ywC5qtCUw-m0jCaPgAcbMZZDL8382Y0TU-gEXxwgK3NKyrCdqu3fgw9Mnxnx7sMbxY/s1084/Tarja%20pronta.png" class="w-full max-w-[280px] md:max-w-[600px] h-auto" alt="Cartões" />
-                        </div>
+<img src="./assets/tarja-cartões.webp" class="w-full max-w-[600px] h-auto" alt="Cartões Aceitos" />                        </div>
                         <div class="w-full max-w-[1600px] mx-auto mt-8">
                             <div class="bg-[#E7252A] rounded-t-lg py-2 px-4 text-center"><h2 class="text-xl font-black text-[#EED117] uppercase">NOSSA LOCALIZAÇÃO</h2></div>
                             <div class="border-x-2 border-b-2 border-[#E7252A] bg-[#EED117] p-4 rounded-b-lg">
