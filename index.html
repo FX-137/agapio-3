@@ -383,15 +383,24 @@
                         <div class="w-full max-w-[1600px] mx-auto mt-8 flex justify-center">
                             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEin2r0kT4FAtOeGB7XCV0nSHYOj0rBHIxkryrP0Jc70iuSP028aXlAYkPhtfr5GopTpIdO2w5rKYfwe0lMuWLNz6rTL3fNsmctbl3OMX7EaeqNVK3KWLYohJ1K79ywC5qtCUw-m0jCaPgAcbMZZDL8382Y0TU-gEXxwgK3NKyrCdqu3fgw9Mnxnx7sMbxY/s1084/Tarja%20pronta.png" class="w-full max-w-[280px] md:max-w-[600px] h-auto" alt="Cartões" />
                         </div>
-                        <div class="w-full max-w-[1600px] mx-auto mt-8">
-                            <div class="bg-[#E7252A] rounded-t-lg py-2 px-4 text-center"><h2 class="text-xl font-black text-[#EED117] uppercase">NOSSA LOCALIZAÇÃO</h2></div>
-                            <div class="border-x-2 border-b-2 border-[#E7252A] bg-[#EED117] p-4 rounded-b-lg">
-                                <div class="w-full h-64 border-2 border-[#E7252A] rounded bg-gray-200 mb-4 overflow-hidden">
-                                    <iframe width="100%" height="100%" loading="lazy" src='https://maps.google.com/maps?q=${BUSINESS_INFO.googleMapsQuery}&t=&z=15&ie=UTF8&iwloc=&output=embed' title="Google Maps"></iframe>
-                                </div>
-                                <div class="flex justify-center">
-                                    <a href='https://www.google.com/maps/search/?api=1&query=${BUSINESS_INFO.googleMapsQuery}' target="_blank" class="flex items-center gap-2 bg-[#E7252A] text-[#EED117] font-bold py-3 px-8 rounded shadow-md transition-transform active:scale-95"><${Icons.Nav} className="w-5 h-5" />Como chegar</a>
-                                </div>
+                       <div class="w-full h-64 border-2 border-[#E7252A] rounded bg-gray-200 mb-4 overflow-hidden">
+    <iframe 
+        width="100%" 
+        height="100%" 
+        loading="lazy" 
+        src=${`https://maps.google.com/maps?q=${encodeURIComponent(BUSINESS_INFO.googleMapsQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`} 
+        title="Google Maps">
+    </iframe>
+</div>
+<div class="flex justify-center">
+    <a 
+        href=${`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS_INFO.googleMapsQuery)}`} 
+        target="_blank" 
+        class="flex items-center gap-2 bg-[#E7252A] text-[#EED117] font-bold py-3 px-8 rounded shadow-md transition-transform active:scale-95">
+        <${Icons.Nav} className="w-5 h-5" />
+        Como chegar
+    </a>
+</div>
                             </div>
                         </div>
                     </main>
