@@ -5,28 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Cardápio Agapio Lanches</title>
     
-    <!-- Configurações de Favicon e App -->
-    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqFTznbj8hGOxa8oY7w9On6zmw6VmW6y4kr1lo4M7YG3vNgAVk7PlnlSHjpRanOwBTt8Cf6wvdDkHtBGRIymydYivyhV8d5RxIu-g4gMsqY2i77rRFVYDf25L9IYgPQS5axqc1hNWX_4_tvupmqH37dImY8h57iFPvDoa6x3kDZE2rKfYLjeLutb1BPcU/s1600/A2.png" type="image/png" />
-    <link rel="shortcut icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqFTznbj8hGOxa8oY7w9On6zmw6VmW6y4kr1lo4M7YG3vNgAVk7PlnlSHjpRanOwBTt8Cf6wvdDkHtBGRIymydYivyhV8d5RxIu-g4gMsqY2i77rRFVYDf25L9IYgPQS5axqc1hNWX_4_tvupmqH37dImY8h57iFPvDoa6x3kDZE2rKfYLjeLutb1BPcU/s1600/A2.png" type="image/png" />
-    <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqFTznbj8hGOxa8oY7w9On6zmw6VmW6y4kr1lo4M7YG3vNgAVk7PlnlSHjpRanOwBTt8Cf6wvdDkHtBGRIymydYivyhV8d5RxIu-g4gMsqY2i77rRFVYDf25L9IYgPQS5axqc1hNWX_4_tvupmqH37dImY8h57iFPvDoa6x3kDZE2rKfYLjeLutb1BPcU/s1600/A2.png" />
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.ico/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/logo.ico/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/logo.ico/apple-icon-180x180.png" />
+<link rel="shortcut icon" href="./assets/logo.ico/favicon.ico" />
     
-    <!-- Meta tags para Mobile e PWA -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/logo.ico/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/logo.ico/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/logo.ico/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/logo.ico/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/logo.ico/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/logo.ico/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/logo.ico/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/logo.ico/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.ico/apple-icon-180x180.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/logo.ico/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.ico/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/logo.ico/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.ico/favicon-16x16.png" />
+    
+    <meta name="msapplication-TileColor" content="#E7252A" />
+    <meta name="msapplication-TileImage" content="assets/logo.ico/ms-icon-144x144.png" />
     <meta name="theme-color" content="#E7252A" />
+
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="mobile-web-app-capable" content="yes" />
 
-    <!-- Tags de Compartilhamento (Open Graph / WhatsApp) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Agapio Lanches - Cardápio Digital" />
-    <meta property="og:description" content="Os melhores xis, baurus e cachorros de Porto Alegre desde 1982. Peça agora pelo WhatsApp!" />
-    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/..." />
-    <meta property="og:url" content="https://agapiolanches.com.br" />
+    <link rel="manifest" href="manifest.json" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="manifest" href="manifest.json" 
-    /> <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
+     <style>
         :root {
             --brand-yellow: #EED117;
             --brand-red: #E7252A;
@@ -88,10 +98,10 @@
                 id: "mais_pedidos",
                 title: "Lanches Mais Pedidos",
                 items: [
-                    { id: "MP1", name: "Xis Salada", description: "Pão massinha, hambúrguer bovino, tomate, alface, milho, ervilha, queijo, ovo e maionese.", price: 18.00, image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVSiogRMebpnMoYugjjqLuhLrtfeB9kWJrEnawPljw-OcBmgh5xDWadbG1I_XXgP4_x1P5yMbSUhqQSViDYyNbPVkJqUVJ4U9DwX0vPvpHO60D_QV_L0IJh283jkhoMACbupZANh_zIzm-2AmQRgnQnkG4gRYLCRwe-NbEl0-ZX08WFWw-hAlnA47XIug/s1600/Xis%20salada%20cenario%203.webp" },
-                    { id: "MP2", name: "Big Agápio", description: "Pão massinha, 2 hambúrgueres bovinos, tomate, alface, milho, ervilha, palmito, pepino, presunto, queijo, ovo e maionese.", price: 30.00, image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2YYu-7eBWjz_t1SNtDmQqDk7Q79a9H-CvOsG4RQFhk08M0eIwHIpvvKw-No-JqogxH4JSIbzcIU5JemqXxjObrfSL3-ikayDRIvokzcx1cfYB_nK4OnEmzrdhLZ9i6YQ2_xu10jqrDDZWpHuwReDN1G0GNGRt_KKgohtwjaKzE-AKPs_CCEMQ-cGNITs/s1600/Big%20agapio%20chat.webp" },
-                    { id: "MP3", name: "Bauru Master", description: "Pão cervejinha, contrafilé, provolone, catupiry, tomate, alface, queijos, ovo, presunto, bacon e maionese.", price: 36.00, image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJr-7hPNxAvvu2isPkvwzutWzoyC_6nvbo8ayAuOW3iV3WJRLb528HVzydIEvoXNlD8JanM8GJPG4MQzcoVJMTbxTPuA4AP4EyV5cZkn3TSyFjYmBAaANFRN2QwLzPEs7w2Rcy0wAKxmIh1Ku8YlQe37-aM6MaqRr4sjvgVl0lOHl_rNjYI4o4iXQ5mFc/s1536/Bauru%20master%20chat.webp" },
-                    { id: "MP4", name: "Xis Bacon", description: "Pão massinha, hambúrguer bovino, bacon, tomate, alface, milho, ervilha, queijo, ovo e maionese.", price: 25.00, image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBWJqySWM6KpocXXACw1gRH45Ba4sGorcWOdJ7mkmWxnJZ6JW6UP9238EEstQ49O3zzlxY77zMMV3KKgkbBkkXlVqvRWExaHdPStSy9BAFL_fYIvSZNm6jJS5AE7mQwVvoxHfU8q57bo6UyOZ67MwZ4W7sP9CbYtAds_aUt2qe7qPpk5Pc8OqwTpeYLaQ/s1600/Xis%20bacon%20cenario.webp" }
+                    { id: "MP1", name: "Xis Salada", description: "Pão massinha, hambúrguer bovino, tomate, alface, milho, ervilha, queijo, ovo e maionese.", price: 18.00, image: "./assets/xis-salada.webp" },
+                    { id: "MP2", name: "Big Agápio", description: "Pão massinha, 2 hambúrgueres bovinos, tomate, alface, milho, ervilha, palmito, pepino, presunto, queijo, ovo e maionese.", price: 30.00, image: "./assets/big-agapio.webp" },
+                    { id: "MP3", name: "Bauru Master", description: "Pão cervejinha, contrafilé, provolone, catupiry, tomate, alface, queijos, ovo, presunto, bacon e maionese.", price: 36.00, image: "./assets/bauru-master.webp" },
+                    { id: "MP4", name: "Xis Bacon", description: "Pão massinha, hambúrguer bovino, bacon, tomate, alface, milho, ervilha, queijo, ovo e maionese.", price: 25.00, image: "./assets/xis-bacon.webp" }
                 ]
             },
             {
@@ -375,45 +385,63 @@
                 <div class="min-h-screen flex flex-col relative w-full overflow-x-hidden bg-[#EED117]">
                     <${Hero} info=${BUSINESS_INFO} />
                     <${CategoryNav} categories=${MENU_DATA} />
-                    <main class="w-full px-2 md:px-4 py-6 space-y-12 max-w-[1600px] mx-auto">
+                   <main class="w-full px-2 md:px-4 py-6 space-y-12 max-w-[1600px] mx-auto">
                         <div class="space-y-16">
-                            ${MENU_DATA.map(cat => html`<${MenuSection} key=${cat.id} category=${cat} info=${BUSINESS_INFO} />`)}
-                        </div>
-                        <div class="w-full max-w-[1600px] mx-auto mt-8 flex justify-center">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEin2r0kT4FAtOeGB7XCV0nSHYOj0rBHIxkryrP0Jc70iuSP028aXlAYkPhtfr5GopTpIdO2w5rKYfwe0lMuWLNz6rTL3fNsmctbl3OMX7EaeqNVK3KWLYohJ1K79ywC5qtCUw-m0jCaPgAcbMZZDL8382Y0TU-gEXxwgK3NKyrCdqu3fgw9Mnxnx7sMbxY/s1084/Tarja%20pronta.png" class="w-full max-w-[280px] md:max-w-[600px] h-auto" alt="Cartões" />
-                        </div>
-                        <div class="w-full max-w-[1600px] mx-auto mt-8">
-                            <div class="bg-[#E7252A] rounded-t-lg py-2 px-4 text-center"><h2 class="text-xl font-black text-[#EED117] uppercase">NOSSA LOCALIZAÇÃO</h2></div>
-                            <div class="border-x-2 border-b-2 border-[#E7252A] bg-[#EED117] p-4 rounded-b-lg">
-                                <div class="w-full h-64 border-2 border-[#E7252A] rounded bg-gray-200 mb-4 overflow-hidden">
-                                    <iframe width="100%" height="100%" loading="lazy" src="https://maps.google.com/maps?q=${BUSINESS_INFO.googleMapsQuery}&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Google Maps"></iframe>
-                                </div>
-                                <div class="flex justify-center">
-                                    <a href="https://www.google.com/maps/search/?api=1&query=${BUSINESS_INFO.googleMapsQuery}" target="_blank" class="flex items-center gap-2 bg-[#E7252A] text-[#EED117] font-bold py-3 px-8 rounded shadow-md transition-transform active:scale-95"><${Icons.Nav} className="w-5 h-5" />Como chegar</a>
-                                </div>
+                        ${MENU_DATA.map(cat => html`<${MenuSection} key=${cat.id} category=${cat} info=${BUSINESS_INFO} />`)}
+                        
+                        <div class="w-full max-w-[1200px] mx-auto p-4">
+                            <div class="bg-[#E7252A] rounded-t-lg py-3 text-center">
+                                <h2 class="text-xl font-black text-[#EED117] uppercase tracking-widest">Nossa Localização</h2>
                             </div>
-                        </div>
-                    </main>
+                            
+                            <div class="border-2 border-[#E7252A] p-3 rounded-b-lg bg-white/50 flex flex-col gap-4">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(BUSINESS_INFO.address)}" 
+                                   target="_blank" 
+                                   class="w-full group relative overflow-hidden rounded-md border border-[#E7252A]/20 block">
+                                    
+                                    <img src="./assets/maps.webp" 
+                                         class="w-full h-[180px] md:h-[250px] object-cover group-hover:scale-105 transition-transform duration-500" 
+                                         alt="Mapa Agápio Lanches" />
+                                    
+                                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                        <span class="opacity-0 group-hover:opacity-100 bg-[#E7252A] text-[#EED117] px-4 py-2 rounded-full font-bold text-xs shadow-lg transition-opacity">
+                                            VER NO GOOGLE MAPS
+                                        </span>
+                                    </div>
+                                </a>
 
-                    <div class="bg-[#EED117] border-t-2 border-[#E7252A] py-6 text-sm text-[#E7252A]">
-                        <div class="max-w-[1600px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-                            <div class="font-bold">© ${new Date().getFullYear()} ${BUSINESS_INFO.name}. Todos os direitos reservados.</div>
-                            <div class="flex gap-4 font-bold uppercase tracking-widest text-[10px]">
-                                <button onClick=${() => setModal('terms')} class="hover:text-[#C01E22]">Termos de Uso</button>
-                                <span>|</span>
-                                <button onClick=${() => setModal('privacy')} class="hover:text-[#C01E22]">Politica de Privacidade</button>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(BUSINESS_INFO.address)}" 
+                                   target="_blank" 
+                                   class="w-full bg-[#E7252A] text-[#EED117] font-black py-4 rounded-md text-center uppercase hover:bg-[#C01E22] transition-colors shadow-md text-base">
+                                   📍 Como Chegar Agora
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <footer class="bg-[#EED117] text-[#E7252A] py-3 border-t border-[#E7252A]/30">
-                        <div class="max-w-[1600px] mx-auto px-4 flex items-center justify-center gap-2">
-                            <div class="text-[9px] font-bold uppercase tracking-wide">Criado por <span class="text-[#C01E22]">FCL</span></div>
-                            <a href="https://wa.me/${BUSINESS_INFO.devWhatsapp}?text=Olá Fernando. Gostaria de mais informações sobre criação de sites." target="_blank" class="flex items-center gap-1 hover:scale-110 transition-all">
-                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDjkkz_vlntJDY40iwAVZC60A5F5b6IwN5GpInCRMUiOo-kZ6ANNWSX1GG6sN7bYDKQmiD7P6n2fWaMBMlnSOOYLd3vItbVV4MJYff8ly1_P9mhagS_vdRYHBh5mrwYQdOrn0Yb5866Dz3uzghrVw3dOuk00FdKJHjBXVUaNLQoW7hJmy79HNkh6DVqmc/s1600/whatsapp1.png" class="w-4 h-4" alt="WhatsApp" />
-                                <span class="text-[9px] font-bold">Contato</span>
-                            </a>
+                </main>
+
+                <div class="bg-[#EED117] border-t-2 border-[#E7252A] py-6 text-sm text-[#E7252A]">
+                    <div class="max-w-[1600px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                        <div class="font-bold">© ${new Date().getFullYear()} ${BUSINESS_INFO.name}. Todos os direitos reservados.</div>
+                        <div class="flex gap-4 font-bold uppercase tracking-widest text-[10px]">
+                            <button onClick=${() => setModal('terms')} class="hover:text-[#C01E22]">Termos de Uso</button>
+                            <span>|</span>
+                            <button onClick=${() => setModal('privacy')} class="hover:text-[#C01E22]">Politica de Privacidade</button>
                         </div>
-                    </footer>
+                    </div>
+                </div>
+
+                <footer class="bg-[#EED117] text-[#E7252A] py-3 border-t border-[#E7252A]/30">
+                    <div class="max-w-[1600px] mx-auto px-4 flex items-center justify-center gap-3">
+                        <div class="text-[10px] font-bold uppercase tracking-wide">
+                            Criado por <span class="text-[#C01E22]">FCL</span>
+                        </div>
+                        <a href="https://wa.me/${BUSINESS_INFO.devWhatsapp}" target="_blank" class="flex items-center gap-1.5 hover:opacity-80 transition-all">
+                            <img src="./assets/whatsapp.webp" class="w-4 h-4 object-contain" alt="WhatsApp" />
+                            <span class="text-[10px] font-extrabold uppercase">Contato</span>
+                        </a>
+                    </div>
+                </footer>
 
                     <${CookieConsent} />
 
