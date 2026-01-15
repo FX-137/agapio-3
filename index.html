@@ -385,7 +385,7 @@
                 <div class="min-h-screen flex flex-col relative w-full overflow-x-hidden bg-[#EED117]">
                     <${Hero} info=${BUSINESS_INFO} />
                     <${CategoryNav} categories=${MENU_DATA} />
-                   <main class="flex-grow pt-8 pb-12">
+                   <main class="flex-grow pt-4 pb-12">
                     <div class="space-y-16">
                         ${MENU_DATA.map(cat => html`<${MenuSection} key=${cat.id} category=${cat} info=${BUSINESS_INFO} />`)}
                         
