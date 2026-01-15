@@ -266,14 +266,14 @@
                         </a>
                     </div>
                     <a href="pedido.html" class="w-full max-w-[280px] bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-base py-2.5 px-6 rounded shadow-md mb-6 flex items-center justify-center gap-2 animate-pulse-green transition-transform active:scale-95">
-    <${Icons.Whatsapp} className="w-5 h-5" />
-    Pedir pelo WhatsApp
-</a>
+                        <${Icons.Whatsapp} className="w-5 h-5" />
+                        Pedir pelo WhatsApp
+                    </a>
                     <div class="flex flex-col items-center gap-1 text-[#E7252A] font-bold text-sm md:text-base">
-                        <div class="flex items-start justify-center gap-2 px-4 text-center">
-                            <${Icons.Map} className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                            <span class="text-center leading-tight">${info.address}</span>
-                        </div>
+                        ${info.openingHours.map(hour => html`<span>${hour}</span>`)}
+                    </div>
+                </div>`; // <-- O fechamento tem que ser exatamente assim
+        };
                         <div class="uppercase mt-1 text-[#E7252A]">
                             ${info.openingHours.map((h, i) => html`<div key=${i}>${h}</div>`)}
                         </div>
