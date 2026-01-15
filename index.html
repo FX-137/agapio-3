@@ -385,10 +385,10 @@
                 <div class="min-h-screen flex flex-col relative w-full overflow-x-hidden bg-[#EED117]">
                     <${Hero} info=${BUSINESS_INFO} />
                     <${CategoryNav} categories=${MENU_DATA} />
-                <main class="w-full px-2 md:px-4 py-6 space-y-12 max-w-[1600px] mx-auto">
-                        <div class="space-y-16">
-                            ${MENU_DATA.map(cat => html`<${MenuSection} key=${cat.id} category=${cat} info=${BUSINESS_INFO} />`)}
-                        </div>
+                <main class="flex-grow pt-16 pb-12"> <div class="space-y-8"> ${MENU_DATA.map((cat, index) => html`
+            <div class="${index === 0 ? '-mt-4' : ''}"> <${MenuSection} key=${cat.id} category=${cat} info=${BUSINESS_INFO} />
+            </div>
+        `)}
                         
                         <div class="w-full max-w-[1200px] mx-auto p-4">
                             <div class="bg-[#E7252A] rounded-t-lg py-3 text-center">
