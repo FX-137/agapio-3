@@ -394,13 +394,35 @@
                         <div class="w-full max-w-[1600px] mx-auto mt-8">
                             <div class="bg-[#E7252A] rounded-t-lg py-2 px-4 text-center"><h2 class="text-xl font-black text-[#EED117] uppercase">NOSSA LOCALIZAÇÃO</h2></div>
                             <div class="border-x-2 border-b-2 border-[#E7252A] bg-[#EED117] p-4 rounded-b-lg">
-                                <div class="w-full h-64 border-2 border-[#E7252A] rounded bg-gray-200 mb-4 overflow-hidden">
-                                    <iframe width="100%" height="100%" loading="lazy" src='https://maps.google.com/maps?q=${BUSINESS_INFO.googleMapsQuery}&t=&z=15&ie=UTF8&iwloc=&output=embed' title="Google Maps"></iframe>
-                                </div>
-                                <div class="flex justify-center">
-                                    <a href='https://www.google.com/maps/search/?api=1&query=${BUSINESS_INFO.googleMapsQuery}' target="_blank" class="flex items-center gap-2 bg-[#E7252A] text-[#EED117] font-bold py-3 px-8 rounded shadow-md transition-transform active:scale-95"><${Icons.Nav} className="w-5 h-5" />Como chegar</a>
-                                </div>
-                            </div>
+                                <div class="w-full max-w-[1600px] mx-auto p-4">
+    <div class="bg-[#E7252A] rounded-t-lg py-2 text-center">
+        <h2 class="text-xl font-black text-[#EED117] uppercase tracking-tighter">Localização</h2>
+    </div>
+    
+    <div class="border-2 border-[#E7252A] p-2 md:p-4 rounded-b-lg bg-white/50 flex flex-col items-center gap-4">
+        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Jos%C3%A9+de+Alencar%2C+869+-+Menino+Deus%2C+Porto+Alegre+-+RS" 
+           target="_blank" 
+           class="w-full group relative overflow-hidden rounded-lg border border-[#E7252A]/30 block shadow-sm">
+            
+            <img src="./assets/maps.webp" 
+                 class="w-full h-[180px] md:h-[300px] object-cover group-hover:scale-105 transition-transform duration-700" 
+                 alt="Mapa Agápio Lanches" />
+            
+            <div class="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors flex items-center justify-center">
+                <span class="bg-[#E7252A] text-[#EED117] px-6 py-2 rounded-full font-black text-sm shadow-2xl border-2 border-[#EED117] transform group-hover:scale-110 transition-transform">
+                    CLIQUE PARA ABRIR O MAPA
+                </span>
+            </div>
+        </a>
+
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Jos%C3%A9+de+Alencar%2C+869+-+Menino+Deus%2C+Porto+Alegre+-+RS" 
+           target="_blank" 
+           class="w-full bg-[#E7252A] text-[#EED117] font-black py-4 rounded-lg text-center uppercase hover:bg-[#C01E22] transition-all shadow-md text-lg">
+           🚀 Como Chegar Agora
+        </a>
+    </div>
+</div>
                         </div>
                     </main>
 
