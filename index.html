@@ -266,14 +266,14 @@
                         </a>
                     </div>
                     <a href="pedido.html" class="w-full max-w-[280px] bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-base py-2.5 px-6 rounded shadow-md mb-6 flex items-center justify-center gap-2 animate-pulse-green transition-transform active:scale-95">
-                        <${Icons.Whatsapp} className="w-5 h-5" />
-                        Pedir pelo WhatsApp
-                    </a>
+    <${Icons.Whatsapp} className="w-5 h-5" />
+    Pedir pelo WhatsApp
+</a>
                     <div class="flex flex-col items-center gap-1 text-[#E7252A] font-bold text-sm md:text-base">
-                        ${info.openingHours.map(hour => html`<span>${hour}</span>`)}
-                    </div>
-                </div>`; // <-- O fechamento tem que ser exatamente assim
-        };
+                        <div class="flex items-start justify-center gap-2 px-4 text-center">
+                            <${Icons.Map} className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                            <span class="text-center leading-tight">${info.address}</span>
+                        </div>
                         <div class="uppercase mt-1 text-[#E7252A]">
                             ${info.openingHours.map((h, i) => html`<div key=${i}>${h}</div>`)}
                         </div>
@@ -410,16 +410,12 @@
                                     </div>
                                 </a>
 
-                               <div class="flex justify-center mt-6">
-    <a href="https://www.google.com/maps/dir/?api=1&destination=Agápio+Lanches" 
-       target="_blank" 
-       class="flex items-center gap-2 bg-[#E7252A] text-[#EED117] font-bold py-3 px-8 rounded shadow-md transition-transform active:scale-95">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-        </svg>
-        <span>COMO CHEGAR AGORA</span>
-    </a>
-</div>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(BUSINESS_INFO.address)}" 
+                                   target="_blank" 
+                                   class="w-full bg-[#E7252A] text-[#EED117] font-black py-4 rounded-md text-center uppercase hover:bg-[#C01E22] transition-colors shadow-md text-base">
+                                   📍 Como Chegar Agora
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </main>
